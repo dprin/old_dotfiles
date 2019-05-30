@@ -1,0 +1,62 @@
+set selection-clipboard clipboard
+
+# Dracula color theme for Zathura
+# link:( https://github.com/dracula/dracula-theme#color-palette )
+# Swaps Foreground for Background to get a light version
+# Comment after the color is the color's name, as it appears in the palette
+
+
+# Light/Default mode settings:
+# 
+#
+set notification-error-bg       "#ff5555" # Red
+set notification-error-fg       "#d9d9d9" # Foreground
+set notification-warning-bg     "#ffb86c" # Orange
+set notification-warning-fg     "#44475a" # Selection
+set notification-bg             "#262728" # Background
+set notification-fg             "#d9d9d9" # Foreground
+
+set completion-bg               "#262728" # Background
+set completion-fg               "#6272a4" # Comment
+set completion-group-bg         "#262728" # Background
+set completion-group-fg         "#6272a4" # Comment
+set completion-highlight-bg     "#44475a" # Selection
+set completion-highlight-fg     "#d9d9d9" # Foreground
+
+set index-bg                    "#262728" # Background
+set index-fg                    "#d9d9d9" # Foreground
+set index-active-bg             "#44475a" # Current Line
+set index-active-fg             "#d9d9d9" # Foreground
+
+set inputbar-bg                 "#262728" # Background
+set inputbar-fg                 "#d9d9d9" # Foreground
+set statusbar-bg                "#262728" # Background
+set statusbar-fg                "#d9d9d9" # Foreground
+
+set highlight-color             "#ffb86c" # Orange
+set highlight-active-color      "#ff79c6" # Pink
+
+set default-bg                  "#262728" # Background
+set default-fg                  "#d9d9d9" # Foreground
+
+set render-loading              true
+set render-loading-fg           "#262728" # Background
+set render-loading-bg           "#d9d9d9" # Foreground
+
+# Recolor mode settings
+#
+#
+set recolor-lightcolor          "#262728" # Background
+set recolor-darkcolor           "#d9d9d9" # Foreground
+
+# Startup options
+#
+#
+set adjust-open width
+set recolor true
+
+map <Left> navigate previous
+map <Right> navigate next
+map <C-=> zoom in
+map <C--> zoom out
+map B jumplist backward
