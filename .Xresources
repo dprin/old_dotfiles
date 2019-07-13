@@ -1,5 +1,5 @@
 !font
-URxvt.font: xft:creep:textsize=16
+URxvt.font: xft:tamzen:textsize=15
 
 !URxvt.letterspace: -200
 
@@ -54,7 +54,5 @@ URxvt.clipboard.autocopy: true
 ! remove scrollbar
 URxvt.scrollBar: false
 
-! === rofi ===
-rofi.bg:        #262728
-rofi.fg:        #d9d9d9
-rofi.opacity:   70
+URxvt.inputMethod: ibus
+URxvt.preeditType: OverTheSpot
