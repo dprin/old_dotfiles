@@ -24,7 +24,7 @@ font-2 = Font Awesome 5 Brands:pixelsize=12;2
 font-3 = Weather Icons:size=12;2
 
 modules-left = i3
-modules-center = spotify
+modules-center = 
 modules-right = memory cpu date powermenu
 
 tray-position = right
@@ -102,7 +102,7 @@ label-padding = 2
 ; if `date-alt` or `time-alt` is defined, clicking
 ; the module will toggle between formats
 ;date-alt = %A, %d %B %Y
-time-alt = %d/%m/%Y
+time-alt = %A %d/%m/%Y
 
 [module/cpu]
 type = internal/cpu
@@ -123,10 +123,3 @@ format = <label>
 
 label = RAM %percentage_used%%
 label-padding = 2
-
-[module/spotify]
-type = custom/script
-interval = 5
-format-prefix = "   "  
-format = <label>
-exec = python /home/xdprindx/.config/polybar/spotify.py
