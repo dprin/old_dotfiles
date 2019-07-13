@@ -9,24 +9,37 @@ font pango:monospace 8
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
-
 #----------------------------------------------- CUSTOM STUFF OTHER THAN BAR ----------------------------------------#
 
 #++++++++++++++++ EXEC STUFF WHEN YOU START
-# setting up autolock
-# exec xautolock -time 5 -locker "i3lock -i '/home/xdprindx/Pictures/lock.png'"
-
 # starting compton
-exec compton --config /home/xdprindx/.config/compton/config
+exec_always compton --config /home/prin/.config/compton/config
 
 # restoring background
 exec nitrogen --restore
 
 # start polybar
-exec polybar -c=/home/xdprindx/.config/polybar/myconfig topbar
+exec_always killall polybar;polybar -c=/home/prin/.config/polybar/myconfig topbar
 
-# start custom script
-exec python /home/xdprindx/.config/i3/lock.py
+exec dunst
+
+#discord
+exec discord
+
+# firefox
+exec firefox
+
+# code
+exec code
+
+#  dropbox
+exec dropbox
+
+#ibus (thing that allows typing in different languages)
+exec ibus-daemon --xim
+
+# udiskie (thing that automatically mounts usbs and stuff)
+exec udiskie
 
 #++++++++++++++++ CUSTOM SHORTCUTS
 # open ranger
@@ -35,11 +48,14 @@ bindsym $mod+F1 exec i3-sensible-terminal -e 'ranger'
 # open htop
 bindsym $mod+F2 exec i3-sensible-terminal -e 'htop'
 
+# rofi script for books
+bindsym $mod+F3 exec /home/prin/.scripts/books_script.sh
+
 # take a screenshot
 bindsym $mod+F11 exec scrot -e 'mv $f ~/Pictures/_shots/'
 
 # lock screen
-bindsym $mod+F12 exec i3lock -i '/home/xdprindx/Pictures/lock.png'
+bindsym $mod+F12 exec i3lock -i '/home/prin/Pictures/used_lock.png'
 
 # start rofi
 bindsym $mod+d exec --no-startup-id rofi -show run
@@ -47,7 +63,7 @@ bindsym $mod+d exec --no-startup-id rofi -show run
 #++++++++++++++++ THE REST
 # gaps between windows
 gaps inner 2
-gaps outer 10
+gaps outer 5
 
 # removing titles
 for_window [class="^.*"] border pixel 0
