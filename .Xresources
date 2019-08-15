@@ -1,7 +1,7 @@
 !font
-URxvt.font: xft:tamzen:textsize=15
+URxvt.font: xft:knxt:textsize=10
 
-!URxvt.letterspace: -200
+!URxvt.letterspace: -10
 
 ! special
 *.foreground:   #d9d9d9
