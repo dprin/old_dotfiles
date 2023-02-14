@@ -1,0 +1,27 @@
+#!/bin/bash
+
+sxhkd &
+xrandr --output eDP-1-1 --auto &
+xss-lock -- i3lock-fancy -n &
+polybar &
+nitrogen --restore &
+xinput set-prop 12 'libinput Accel Speed' -0.25 &
+xsetroot -cursor_name left_ptr &
+dunst &
+
+bspc monitor -g 1920x1080+0+0
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+bspc config border_width	2
+bspc config window_gap		0
+
+bspc config split_ratio		0.5
+bspc config focus_follows_pointer	false
+bspc config pointer_modifier	mod1
+
+bspc config automatic_scheme	longest_side
+bspc config initial_polarity 	second_child
+
+bspc rule -a google-chrome desktop='^2'
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bpsc rule -a zathura state=tiled
